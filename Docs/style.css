@@ -69,3 +69,239 @@ footer {
   padding: 1rem 0;
   margin-top: 2rem;
 }
+
+/* ====== OUTREACH PAGE STYLES ====== */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.report-section {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+.report-section h2 {
+  color: #2d3a3a;
+  border-bottom: 3px solid #2d3a3a;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+.report-section h3 {
+  color: #3a5a5a;
+  margin-top: 2rem;
+}
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.step-card {
+  background: #f0f4f4;
+  border-radius: 8px;
+  padding: 1.25rem;
+  border-left: 4px solid #2d3a3a;
+}
+.step-num {
+  display: inline-block;
+  background: #2d3a3a;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.step-card h4 {
+  margin: 0.5rem 0;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+.data-table th, .data-table td {
+  border: 1px solid #ddd;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+.data-table th {
+  background: #2d3a3a;
+  color: #fff;
+  font-weight: 600;
+}
+.data-table tbody tr:nth-child(even) {
+  background: #f8fafa;
+}
+.total-row {
+  background: #e0e7e9 !important;
+  font-weight: bold;
+}
+.insight-box {
+  background: #e8f5e9;
+  border-left: 5px solid #2e7d32;
+  border-radius: 6px;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+}
+.insight-box h4 {
+  margin-top: 0;
+  color: #2e7d32;
+}
+.critical-insight {
+  background: #fff3e0;
+  border-left-color: #e65100;
+}
+.critical-insight h4 {
+  color: #e65100;
+}
+.strategy-card {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 1rem 0;
+  border-left: 5px solid #ccc;
+}
+.strategy-card h4 {
+  margin-top: 0;
+}
+.priority-high {
+  border-left-color: #2e7d32;
+}
+.priority-medium {
+  border-left-color: #1565c0;
+}
+.priority-future {
+  border-left-color: #6a1b9a;
+}
+.priority-label {
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+.priority-label.high {
+  color: #c62828;
+}
+.priority-label.medium {
+  color: #e65100;
+}
+.priority-label.low {
+  color: #1565c0;
+}
+.postcard-mockup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.postcard-front, .postcard-back {
+  border: 2px dashed #aaa;
+  border-radius: 8px;
+  padding: 1.25rem;
+  background: #fffde7;
+}
+.postcard-front h4, .postcard-back h4 {
+  text-align: center;
+  color: #666;
+  margin-top: 0;
+}
+.postcard-headline {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #c62828;
+  text-align: center;
+}
+.postcard-sub {
+  text-align: center;
+  color: #555;
+}
+.postcard-photo {
+  text-align: center;
+  padding: 2rem;
+  background: #eee;
+  border-radius: 4px;
+  color: #888;
+}
+.postcard-cta {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.sequence-timeline {
+  margin: 1.5rem 0;
+}
+.seq-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-left: 3px solid #2d3a3a;
+  margin-left: 1rem;
+}
+.seq-time {
+  min-width: 70px;
+  font-weight: bold;
+  color: #2d3a3a;
+  font-size: 0.85rem;
+}
+.seq-icon {
+  font-size: 1.5rem;
+}
+.seq-detail {
+  flex: 1;
+}
+.seq-detail strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.seq-detail p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+.sources-list li {
+  margin: 0.5rem 0;
+}
+.competitor-card {
+  background: #f5f8fa;
+  border: 1px solid #d0d9de;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+.competitor-card h3 {
+  margin-top: 0;
+  color: #2d3a3a;
+  border-bottom: 2px solid #2d3a3a;
+  padding-bottom: 0.5rem;
+}
+.competitor-card h3 em {
+  color: #666;
+  font-weight: normal;
+}
+.competitor-card h4 {
+  color: #3a5a5a;
+  margin-top: 1.25rem;
+}
+@media (max-width: 700px) {
+  .postcard-mockup {
+    grid-template-columns: 1fr;
+  }
+  .step-grid {
+    grid-template-columns: 1fr;
+  }
+  .data-table {
+    font-size: 0.85rem;
+  }
+  .seq-step {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
