@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Analysis | 4 Feathers Fencing & Contracting</title>
+  <meta name="description" content="Comprehensive market analysis and competitive research for 4 Feathers Fencing & Contracting in the Oklahoma City fencing market.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .analysis-card { background: var(--white); border-radius: var(--radius); padding: 2rem; box-shadow: var(--shadow-sm); border: 1px solid var(--border); margin-bottom: 1.5rem; }
+    .analysis-card h3 { margin-top: 0; font-size: 1.3rem; color: var(--primary); }
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem; margin: 2rem 0; }
+    .kpi-card { background: var(--white); border-radius: var(--radius); padding: 1.5rem; text-align: center; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+    .kpi-number { font-size: 2.2rem; font-weight: 800; color: var(--accent); line-height: 1; }
+    .kpi-label { font-size: 0.85rem; color: var(--text-light); margin-top: 0.25rem; }
+    .competitor-row { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; padding: 1rem; border-bottom: 1px solid var(--border); align-items: center; }
+    .competitor-row:last-child { border-bottom: none; }
+    .competitor-header { background: var(--primary); color: var(--white); border-radius: var(--radius-sm) var(--radius-sm) 0 0; font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .check { color: #2e7d32; font-weight: bold; }
+    .cross { color: #c62828; }
+    .gap-tag { display: inline-block; padding: 0.2rem 0.75rem; border-radius: 50px; font-size: 0.78rem; font-weight: 600; margin: 0.15rem; }
+    .gap-opportunity { background: #e8f5e9; color: #2e7d32; }
+    .gap-strength { background: #e3f2fd; color: #1565c0; }
+    .gap-threat { background: #fff3e0; color: #e65100; }
+    .swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.5rem 0; }
+    .swot-card { border-radius: var(--radius); padding: 1.5rem; }
+    .swot-card h4 { margin: 0 0 0.75rem; font-size: 1.1rem; }
+    .swot-card ul { margin: 0; padding-left: 1.25rem; }
+    .swot-card li { margin: 0.4rem 0; font-size: 0.95rem; }
+    .swot-strengths { background: #e8f5e9; border: 1px solid #a5d6a7; }
+    .swot-strengths h4 { color: #2e7d32; }
+    .swot-weaknesses { background: #ffebee; border: 1px solid #ef9a9a; }
+    .swot-weaknesses h4 { color: #c62828; }
+    .swot-opportunities { background: #e3f2fd; border: 1px solid #90caf9; }
+    .swot-opportunities h4 { color: #1565c0; }
+    .swot-threats { background: #fff3e0; border: 1px solid #ffcc80; }
+    .swot-threats h4 { color: #e65100; }
+    .market-insight { display: flex; gap: 1rem; padding: 1.25rem; background: var(--bg-alt); border-radius: var(--radius-sm); margin: 1rem 0; align-items: flex-start; }
+    .market-insight-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .market-insight-text { flex: 1; }
+    .market-insight-text strong { display: block; margin-bottom: 0.25rem; }
+    .market-insight-text p { margin: 0; font-size: 0.92rem; color: var(--text-light); line-height: 1.6; }
+    .channel-comparison { overflow-x: auto; }
+    .channel-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .channel-table th, .channel-table td { padding: 0.65rem 0.75rem; border: 1px solid var(--border); text-align: left; }
+    .channel-table th { background: var(--primary); color: var(--white); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .channel-table tbody tr:nth-child(even) { background: var(--bg-alt); }
+    .roi-highlight { background: #e8f5e9; font-weight: 700; color: #2e7d32; }
+    .prepared-for { background: var(--white); border: 2px solid var(--accent); border-radius: var(--radius); padding: 2rem; text-align: center; max-width: 600px; margin: 0 auto 2rem; }
+    .prepared-for h3 { color: var(--accent-dark); margin: 0 0 0.5rem; }
+    .prepared-for p { color: var(--text-light); margin: 0.25rem 0; }
+    @media (max-width: 700px) {
+      .swot-grid { grid-template-columns: 1fr; }
+      .competitor-row { grid-template-columns: 1fr; gap: 0.25rem; }
+      .kpi-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">4 Feathers <span class="logo-accent">Fencing</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html" class="nav-cta">Free Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h2>Market Analysis</h2>
+    <p>OKC Fencing Market Research &amp; Competitive Intelligence for 4 Feathers</p>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+
+      <!-- Prepared For -->
+      <div class="prepared-for">
+        <h3>Market Analysis Report</h3>
+        <p><strong>Prepared for:</strong> Dalton &mdash; 4 Feathers Fencing &amp; Contracting LLC</p>
+        <p><strong>Prepared by:</strong> Victor Felisbino &amp; AI Research Team</p>
+        <p><strong>Date:</strong> March 2026</p>
+        <p style="margin-top: 1rem; font-size: 0.88rem; color: var(--text-muted);">This analysis covers the Oklahoma City metro fencing market, your competitive position, and data-backed strategies to grow your business.</p>
+      </div>
+
+      <!-- ===================== -->
+      <!-- MARKET OVERVIEW       -->
+      <!-- ===================== -->
+      <div class="section-header" style="margin-top: 3rem;">
+        <span class="section-label">Section 1</span>
+        <h2>Market Overview</h2>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-number">$76B</div>
+          <div class="kpi-label">US Fencing Industry (2025)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-number">5.2%</div>
+          <div class="kpi-label">Annual Industry Growth Rate</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-number">1.4M+</div>
+          <div class="kpi-label">Households in OKC Metro</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-number">$3,200</div>
+          <div class="kpi-label">Avg Fence Install Cost (OK)</div>
+        </div>
+      </div>
+
+      <div class="analysis-card">
+        <h3>Oklahoma City Fencing Market Dynamics</h3>
+        <div class="market-insight">
+          <div class="market-insight-icon">&#127969;</div>
+          <div class="market-insight-text">
+            <strong>High Demand Drivers</strong>
+            <p>OKC metro is one of the fastest-growing areas in the US. New home construction, storm damage (Oklahoma averages 50+ tornado warnings/year), aging wood fences, and neighborhood HOA requirements create constant demand for fence installation and repair.</p>
+          </div>
+        </div>
+        <div class="market-insight">
+          <div class="market-insight-icon">&#128176;</div>
+          <div class="market-insight-text">
+            <strong>Pricing Landscape</strong>
+            <p>Wood privacy fences: <strong>$22&ndash;$45/linear ft</strong> installed. Vinyl: <strong>$28&ndash;$55/ft</strong>. Chain link: <strong>$15&ndash;$30/ft</strong>. Wrought iron: <strong>$30&ndash;$70/ft</strong>. Average residential job: $2,500&ndash;$5,000. There is strong price competition among smaller operators, but premium quality and reliability still command higher prices.</p>
+          </div>
+        </div>
+        <div class="market-insight">
+          <div class="market-insight-icon">&#128197;</div>
+          <div class="market-insight-text">
+            <strong>Seasonal Patterns</strong>
+            <p><strong>Peak season:</strong> March&ndash;June and September&ndash;October. <strong>Slow season:</strong> December&ndash;February. Smart contractors use slow months for marketing and relationship building to fill the spring pipeline.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- COMPETITIVE ANALYSIS  -->
+      <!-- ===================== -->
+      <div class="section-header" style="margin-top: 3rem;">
+        <span class="section-label">Section 2</span>
+        <h2>Competitive Analysis</h2>
+        <p>We analyzed your top local and national competitors to find where you win and where there are gaps.</p>
+      </div>
+
+      <!-- Fence OKC Deep Dive -->
+      <div class="analysis-card">
+        <h3>&#127942; #1 Local Competitor: Fence OKC</h3>
+        <p style="color: var(--text-light);">The dominant fencing company in the OKC metro. Here's what they do and how you compare.</p>
+
+        <div class="market-insight">
+          <div class="market-insight-icon">&#128187;</div>
+          <div class="market-insight-text">
+            <strong>What They Do Well</strong>
+            <p>Instant online fence quote tool (satellite map-based), Hearth financing calculator, 20+ Oklahoma-specific blog posts for SEO, BBB accreditation, 6 social media channels, veteran-owned branding, commercial contracts (ODOT, OKC Zoo, Federal Bureau of Prisons), serving 30+ cities.</p>
+          </div>
+        </div>
+
+        <div class="market-insight">
+          <div class="market-insight-icon">&#127919;</div>
+          <div class="market-insight-text">
+            <strong>Where You Beat Them</strong>
+            <p><strong>Hours:</strong> They close at 4PM and don't work weekends. You're open 6AM&ndash;10PM + weekends. <strong>Location:</strong> They're in downtown OKC, far from south-metro homeowners. You're right in Blanchard. <strong>Decks:</strong> They don't offer deck building. <strong>Personal touch:</strong> They're corporate; you're owner-operated.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Head to Head Comparison -->
+      <div class="analysis-card">
+        <h3>Head-to-Head: 4 Feathers vs. Competition</h3>
+        <div style="overflow-x: auto;">
+          <table class="channel-table">
+            <thead>
+              <tr>
+                <th>Capability</th>
+                <th>Fence OKC</th>
+                <th>Avg Local Competitor</th>
+                <th>4 Feathers Today</th>
+                <th>Priority</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Google Reviews (50+)</strong></td>
+                <td class="check">&#10003; 200+</td>
+                <td class="check">&#10003; 30&ndash;80</td>
+                <td class="cross">&#10007; Under 10</td>
+                <td><span class="gap-tag gap-threat">Critical</span></td>
+              </tr>
+              <tr>
+                <td><strong>Professional Website</strong></td>
+                <td class="check">&#10003;</td>
+                <td class="check">&#10003;</td>
+                <td class="check">&#10003; New!</td>
+                <td><span class="gap-tag gap-strength">Done</span></td>
+              </tr>
+              <tr>
+                <td><strong>Online Quote Tool</strong></td>
+                <td class="check">&#10003;</td>
+                <td class="cross">&#10007;</td>
+                <td class="cross">&#10007;</td>
+                <td><span class="gap-tag gap-opportunity">Future</span></td>
+              </tr>
+              <tr>
+                <td><strong>SEO Blog Content</strong></td>
+                <td class="check">&#10003; 20+ posts</td>
+                <td class="cross">&#10007;</td>
+                <td class="cross">&#10007;</td>
+                <td><span class="gap-tag gap-opportunity">AI Can Help</span></td>
+              </tr>
+              <tr>
+                <td><strong>Google Local Service Ads</strong></td>
+                <td class="check">&#10003;</td>
+                <td>Some</td>
+                <td class="cross">&#10007;</td>
+                <td><span class="gap-tag gap-threat">High</span></td>
+              </tr>
+              <tr>
+                <td><strong>Social Media (Active)</strong></td>
+                <td class="check">&#10003; 6 channels</td>
+                <td>1&ndash;2</td>
+                <td>Facebook only</td>
+                <td><span class="gap-tag gap-opportunity">Medium</span></td>
+              </tr>
+              <tr>
+                <td><strong>Financing Option</strong></td>
+                <td class="check">&#10003; Hearth</td>
+                <td class="cross">&#10007;</td>
+                <td class="cross">&#10007;</td>
+                <td><span class="gap-tag gap-opportunity">Future</span></td>
+              </tr>
+              <tr>
+                <td><strong>Referral Program</strong></td>
+                <td class="cross">&#10007;</td>
+                <td class="cross">&#10007;</td>
+                <td class="cross">&#10007;</td>
+                <td><span class="gap-tag gap-opportunity">AI Can Help</span></td>
+              </tr>
+              <tr>
+                <td><strong>Weekend / Evening Availability</strong></td>
+                <td class="cross">&#10007; Closes 4PM</td>
+                <td class="cross">&#10007;</td>
+                <td class="check">&#10003; 6AM&ndash;10PM</td>
+                <td><span class="gap-tag gap-strength">Advantage</span></td>
+              </tr>
+              <tr>
+                <td><strong>Deck Building</strong></td>
+                <td class="cross">&#10007;</td>
+                <td>Rare</td>
+                <td class="check">&#10003;</td>
+                <td><span class="gap-tag gap-strength">Advantage</span></td>
+              </tr>
+              <tr>
+                <td><strong>Local to South Metro</strong></td>
+                <td class="cross">&#10007; Downtown OKC</td>
+                <td class="cross">&#10007; Various</td>
+                <td class="check">&#10003; Blanchard</td>
+                <td><span class="gap-tag gap-strength">Advantage</span></td>
+              </tr>
+              <tr>
+                <td><strong>Lead Platform Presence</strong></td>
+                <td class="check">&#10003;</td>
+                <td>Some</td>
+                <td class="cross">&#10007;</td>
+                <td><span class="gap-tag gap-threat">High</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- SWOT ANALYSIS         -->
+      <!-- ===================== -->
+      <div class="section-header" style="margin-top: 3rem;">
+        <span class="section-label">Section 3</span>
+        <h2>SWOT Analysis</h2>
+        <p>Your strengths, weaknesses, opportunities, and threats at a glance.</p>
+      </div>
+
+      <div class="swot-grid">
+        <div class="swot-card swot-strengths">
+          <h4>&#128170; Strengths</h4>
+          <ul>
+            <li>10+ years hands-on experience</li>
+            <li>Extended hours (6AM&ndash;10PM + weekends)</li>
+            <li>Local to underserved south-metro area</li>
+            <li>Multiple services (fences, decks, staining, gates)</li>
+            <li>Low overhead = competitive pricing</li>
+            <li>Owner-operated = personal service</li>
+            <li>Fully insured</li>
+          </ul>
+        </div>
+        <div class="swot-card swot-weaknesses">
+          <h4>&#9888;&#65039; Weaknesses</h4>
+          <ul>
+            <li>Very few Google reviews (under 10)</li>
+            <li>No presence on lead platforms (Thumbtack, Angi)</li>
+            <li>No SEO blog content</li>
+            <li>No online quoting or financing tools</li>
+            <li>Limited social media activity</li>
+            <li>No formal referral program</li>
+            <li>No email marketing or CRM system</li>
+          </ul>
+        </div>
+        <div class="swot-card swot-opportunities">
+          <h4>&#128640; Opportunities</h4>
+          <ul>
+            <li>South-metro market (Blanchard, Newcastle, Tuttle) underserved</li>
+            <li>Google LSA puts you above organic results</li>
+            <li>AI can generate SEO blog content at scale</li>
+            <li>EDDM postcards reach every homeowner affordably</li>
+            <li>Referral program costs nothing until it pays off</li>
+            <li>Nextdoor is free and perfect for local contractors</li>
+            <li>Storm season creates surge demand</li>
+          </ul>
+        </div>
+        <div class="swot-card swot-threats">
+          <h4>&#9888; Threats</h4>
+          <ul>
+            <li>Fence OKC dominates Google search results</li>
+            <li>Larger companies have marketing budgets</li>
+            <li>DIY fence kits from Home Depot/Lowe's</li>
+            <li>Unlicensed competitors undercutting prices</li>
+            <li>Economic slowdown could reduce discretionary spending</li>
+            <li>Material cost increases (lumber, vinyl)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- MARKETING CHANNELS    -->
+      <!-- ===================== -->
+      <div class="section-header" style="margin-top: 3rem;">
+        <span class="section-label">Section 4</span>
+        <h2>Marketing Channel Analysis</h2>
+        <p>We researched every major customer acquisition channel and ranked them by ROI for a fencing business your size.</p>
+      </div>
+
+      <div class="analysis-card">
+        <h3>Channel Performance Comparison</h3>
+        <div class="channel-comparison">
+          <table class="channel-table">
+            <thead>
+              <tr>
+                <th>Channel</th>
+                <th>Cost</th>
+                <th>Response Rate</th>
+                <th>Best For</th>
+                <th>ROI Potential</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Google Reviews</strong></td>
+                <td>Free</td>
+                <td>N/A (trust builder)</td>
+                <td>Credibility, conversion</td>
+                <td class="roi-highlight">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+              </tr>
+              <tr>
+                <td><strong>Google Local Service Ads</strong></td>
+                <td>$25&ndash;80/lead</td>
+                <td>High intent leads</td>
+                <td>Ready-to-buy homeowners</td>
+                <td class="roi-highlight">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+              </tr>
+              <tr>
+                <td><strong>Referral Program</strong></td>
+                <td>$50/referral</td>
+                <td>3&ndash;5x close rate</td>
+                <td>High-trust warm leads</td>
+                <td class="roi-highlight">&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+              </tr>
+              <tr>
+                <td><strong>Thumbtack</strong></td>
+                <td>$15&ndash;60/lead</td>
+                <td>10&ndash;20%</td>
+                <td>Volume residential leads</td>
+                <td>&#9733;&#9733;&#9733;&#9733;</td>
+              </tr>
+              <tr>
+                <td><strong>EDDM Direct Mail</strong></td>
+                <td>$0.33/piece</td>
+                <td>4.9&ndash;9%</td>
+                <td>Local brand awareness</td>
+                <td>&#9733;&#9733;&#9733;&#9733;</td>
+              </tr>
+              <tr>
+                <td><strong>Facebook Posts + Groups</strong></td>
+                <td>Free</td>
+                <td>Varies</td>
+                <td>Community presence</td>
+                <td>&#9733;&#9733;&#9733;&#9733;</td>
+              </tr>
+              <tr>
+                <td><strong>Nextdoor</strong></td>
+                <td>Free</td>
+                <td>Moderate</td>
+                <td>Neighbor recommendations</td>
+                <td>&#9733;&#9733;&#9733;&#9733;</td>
+              </tr>
+              <tr>
+                <td><strong>Angi (HomeAdvisor)</strong></td>
+                <td>$15&ndash;80/lead</td>
+                <td>5&ndash;15%</td>
+                <td>Homeowner project leads</td>
+                <td>&#9733;&#9733;&#9733;</td>
+              </tr>
+              <tr>
+                <td><strong>Yard Signs</strong></td>
+                <td>$5&ndash;10 each</td>
+                <td>1&ndash;3 calls/month/sign</td>
+                <td>Hyper-local visibility</td>
+                <td>&#9733;&#9733;&#9733;</td>
+              </tr>
+              <tr>
+                <td><strong>Door Hangers</strong></td>
+                <td>$0.10&ndash;$0.25</td>
+                <td>1&ndash;5%</td>
+                <td>Instant neighborhood reach</td>
+                <td>&#9733;&#9733;&#9733;</td>
+              </tr>
+              <tr>
+                <td><strong>SEO Blog Content</strong></td>
+                <td>Free (AI) or $50&ndash;200/post</td>
+                <td>Long-term traffic</td>
+                <td>Organic Google rankings</td>
+                <td>&#9733;&#9733;&#9733;</td>
+              </tr>
+              <tr>
+                <td><strong>Cold Calling</strong></td>
+                <td>Time cost</td>
+                <td>1&ndash;3%</td>
+                <td>Not recommended</td>
+                <td>&#9733;</td>
+              </tr>
+              <tr>
+                <td><strong>Email Blasts (Cold)</strong></td>
+                <td>Low</td>
+                <td>&lt;1%</td>
+                <td>Not recommended</td>
+                <td>&#9733;</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- REVENUE PROJECTIONS   -->
+      <!-- ===================== -->
+      <div class="section-header" style="margin-top: 3rem;">
+        <span class="section-label">Section 5</span>
+        <h2>Revenue Projections</h2>
+        <p>Conservative estimates based on industry data for your market and business size.</p>
+      </div>
+
+      <div class="analysis-card">
+        <h3>90-Day Growth Scenario</h3>
+        <p>If you execute the action plan with a <strong>$500/month marketing budget</strong>:</p>
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-number">10&ndash;15</div>
+            <div class="kpi-label">New Leads / Month (Thumbtack + Angi + Google LSA)</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-number">30%</div>
+            <div class="kpi-label">Expected Close Rate</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-number">3&ndash;5</div>
+            <div class="kpi-label">New Jobs / Month</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-number">$9K&ndash;$15K</div>
+            <div class="kpi-label">Additional Monthly Revenue</div>
+          </div>
+        </div>
+
+        <h4 style="margin-top: 2rem;">With EDDM Postcards Added (Month 2):</h4>
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-number">5,000</div>
+            <div class="kpi-label">Postcards Sent ($1,800)</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-number">50&ndash;150</div>
+            <div class="kpi-label">Inquiries Generated</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-number">8&ndash;23</div>
+            <div class="kpi-label">Jobs Closed</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-number">$24K&ndash;$69K</div>
+            <div class="kpi-label">Revenue from Postcards</div>
+          </div>
+        </div>
+
+        <div class="market-insight" style="margin-top: 1.5rem;">
+          <div class="market-insight-icon">&#128200;</div>
+          <div class="market-insight-text">
+            <strong>Conservative 90-Day Total</strong>
+            <p>With $2,500 invested over 90 days across lead platforms + postcards, conservative projection is <strong>$33,000&ndash;$84,000 in new revenue</strong>. That's a 13x&ndash;34x return on investment.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- KEY SPEED METRIC      -->
+      <!-- ===================== -->
+      <div class="analysis-card" style="border-left: 5px solid var(--accent);">
+        <h3>&#9889; The #1 Metric That Determines Success</h3>
+        <div class="kpi-grid" style="margin-top: 1rem;">
+          <div class="kpi-card" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white);">
+            <div class="kpi-number" style="color: var(--accent);">5 min</div>
+            <div class="kpi-label" style="color: rgba(255,255,255,0.8);">Target Lead Response Time</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-number" style="color: var(--accent);">21x</div>
+            <div class="kpi-label">More likely to close if you respond in 5 min vs 30 min</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-number" style="color: var(--accent);">78%</div>
+            <div class="kpi-label">Of people hire the FIRST contractor who responds</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-number" style="color: #c62828;">42 hrs</div>
+            <div class="kpi-label">Average contractor response time (you can destroy this)</div>
+          </div>
+        </div>
+        <p style="margin-top: 1rem; text-align: center; font-weight: 600; color: var(--text-light);">Source: Harvard Business Review / MIT Lead Response Study. This single metric is worth more than any marketing spend.</p>
+      </div>
+
+      <!-- ===================== -->
+      <!-- YOUR TERRITORY        -->
+      <!-- ===================== -->
+      <div class="section-header" style="margin-top: 3rem;">
+        <span class="section-label">Section 6</span>
+        <h2>Your Territory Strategy</h2>
+        <p>Where to focus for maximum impact.</p>
+      </div>
+
+      <div class="analysis-card">
+        <h3>Priority Territory Map</h3>
+        <div class="features-grid" style="margin-top: 1rem;">
+          <div class="feature-card" style="border-left: 4px solid #2e7d32;">
+            <h3 style="color: #2e7d32; font-size: 1rem;">Tier 1 &mdash; Own These</h3>
+            <p><strong>Blanchard, Newcastle, Tuttle</strong></p>
+            <p>These are your home turf. Very few competitors focus here. Dominate with yard signs, door hangers, Nextdoor, and local Facebook groups. Every job = a billboard.</p>
+          </div>
+          <div class="feature-card" style="border-left: 4px solid #1565c0;">
+            <h3 style="color: #1565c0; font-size: 1rem;">Tier 2 &mdash; Grow Into</h3>
+            <p><strong>Norman, Moore, Purcell, Chickasha</strong></p>
+            <p>Within easy driving distance. Higher population = more leads. Use Thumbtack, Angi, and Google LSA to compete. Target EDDM postcards here.</p>
+          </div>
+          <div class="feature-card" style="border-left: 4px solid #6a1b9a;">
+            <h3 style="color: #6a1b9a; font-size: 1rem;">Tier 3 &mdash; Opportunistic</h3>
+            <p><strong>Oklahoma City, Mustang, Yukon, Edmond</strong></p>
+            <p>Take jobs here when they come, but don't spend marketing dollars competing against the big players on their turf. Focus marketing on Tier 1 and 2.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== -->
+      <!-- BOTTOM LINE           -->
+      <!-- ===================== -->
+      <div class="analysis-card" style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: var(--white); border: none;">
+        <h3 style="color: var(--accent-light); font-size: 1.5rem; text-align: center; margin-bottom: 1.5rem;">Bottom Line</h3>
+        <p style="text-align: center; font-size: 1.1rem; color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto 1rem; line-height: 1.8;">
+          4 Feathers has <strong>real competitive advantages</strong> that most local competitors don't have: extended hours, south-metro location, multi-service capability, and 10+ years of experience. The gap is in <strong>visibility</strong>, not quality. The strategies in this analysis are designed to close that visibility gap fast &mdash; so the right customers find you before they find someone else.
+        </p>
+        <div style="text-align: center; margin-top: 1.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="action-plan.html" class="btn btn-primary">Dalton's Action Plan &rarr;</a>
+          <a href="outreach.html" class="btn btn-outline">Full Research Data &rarr;</a>
+          <a href="how-we-help.html" class="btn btn-outline">How We Can Help &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <h3 style="margin:0; font-size: 1.2rem;">4 Feathers <span style="color: var(--accent);">Fencing</span></h3>
+        <p>Professional fencing and contracting services in Blanchard, OK and the surrounding OKC metro area.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61558213563085" target="_blank">FB</a>
+          <a href="https://maps.app.goo.gl/riAeQP8M8up69pFF8" target="_blank">G</a>
+          <a href="https://www.yelp.com/biz/4-feathers-fencing-and-contracting-blanchard" target="_blank">Y</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Strategy</h4>
+        <a href="market-analysis.html">Market Analysis</a>
+        <a href="action-plan.html">Dalton's Action Plan</a>
+        <a href="outreach.html">Full Research</a>
+        <a href="how-we-help.html">How We Help</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:4052769765">(405) 276-9765</a>
+        <a href="mailto:4featherllc@gmail.com">4featherllc@gmail.com</a>
+        <a>Blanchard, OK</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 4 Feathers Fencing and Contracting LLC. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
