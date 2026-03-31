@@ -1,0 +1,1 @@
+This folder is intentionally left empty. All site files have been moved to the lowercase 'docs' folder for GitHub Pages compatibility.
