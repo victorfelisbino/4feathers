@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dalton's Action Plan | 4 Feathers Fencing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .action-plan { max-width: 800px; margin: 0 auto; padding: 0 1rem; }
+    .phase { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: 1.5rem 2rem; margin: 1.5rem 0; border: 1px solid var(--border); }
+    .phase h2 { margin-top: 0; font-size: 1.4rem; }
+    .phase-now { border-left: 6px solid #2e7d32; }
+    .phase-soon { border-left: 6px solid #1565c0; }
+    .phase-later { border-left: 6px solid #6a1b9a; }
+    .phase-label { display: inline-block; padding: 3px 12px; border-radius: 20px; color: #fff; font-size: 0.8rem; font-weight: bold; margin-bottom: 0.5rem; }
+    .label-now { background: #2e7d32; }
+    .label-soon { background: #1565c0; }
+    .label-later { background: #6a1b9a; }
+    .todo { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+    .todo:last-child { border-bottom: none; }
+    .todo-check { width: 22px; height: 22px; border: 2px solid #aaa; border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
+    .todo-text { flex: 1; }
+    .todo-text strong { display: block; font-size: 1.05rem; }
+    .todo-text span { color: var(--text-light); font-size: 0.9rem; }
+    .money-box { background: #e8f5e9; border-radius: var(--radius-sm); padding: 1.25rem; margin: 1rem 0; }
+    .money-box h3 { margin-top: 0; color: #2e7d32; }
+    .vs-table { width: 100%; border-collapse: collapse; margin: 1rem 0; border-radius: var(--radius-sm); overflow: hidden; }
+    .vs-table th, .vs-table td { padding: 0.5rem 0.75rem; border: 1px solid var(--border); text-align: center; }
+    .vs-table th { background: var(--primary); color: var(--white); }
+    .win { color: #2e7d32; font-weight: bold; }
+    .lose { color: #c62828; }
+    .tip-box { background: #fff3e0; border-left: 5px solid #e65100; border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin: 1rem 0; }
+    .tip-box strong { color: #e65100; }
+    .script-box { background: var(--bg-alt); border-radius: var(--radius-sm); padding: 1rem 1.25rem; margin: 0.75rem 0; font-style: italic; color: var(--text-light); border-left: 4px solid var(--primary); }
+    .big-number { font-size: 2.5rem; font-weight: 800; color: var(--primary); line-height: 1; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1rem 0; text-align: center; }
+    .stat-card { background: var(--bg-alt); border-radius: var(--radius-sm); padding: 1rem; }
+    .stat-card span { display: block; font-size: 0.85rem; color: var(--text-light); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">4 Feathers <span class="logo-accent">Fencing</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html" class="nav-cta">Free Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <h2>Dalton's Action Plan</h2>
+    <p>The simple version. Do these things in order and you'll get more jobs.</p>
+  </section>
+
+  <main class="action-plan">
+
+    <!-- =============================== -->
+    <!-- YOUR BIGGEST ADVANTAGES         -->
+    <!-- =============================== -->
+    <div class="phase phase-now">
+      <h2>Your Secret Weapons (Things You Already Beat the Competition On)</h2>
+      <p>Before anything else, know what you've got going for you:</p>
+      <ul>
+        <li><strong>You're open when they're closed.</strong> Fence OKC (the biggest local competitor) closes at 4PM and doesn't work weekends. You're available 6AM&ndash;10PM and weekends. That's huge.</li>
+        <li><strong>You're closer to your customers.</strong> You're in Blanchard. Most competitors are in OKC. People like hiring local.</li>
+        <li><strong>You build decks too.</strong> Most fence companies only do fences. You can offer more to each customer.</li>
+        <li><strong>10+ years experience.</strong> That matters to homeowners.</li>
+      </ul>
+    </div>
+
+    <!-- =============================== -->
+    <!-- PHASE 1: THIS WEEK              -->
+    <!-- =============================== -->
+    <div class="phase phase-now">
+      <span class="phase-label label-now">DO THIS WEEK &mdash; FREE</span>
+      <h2>Step 1: Get More Google Reviews</h2>
+      <p>This is the #1 thing that will bring you more business. Nothing else comes close.</p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="big-number">90%</div>
+          <span>of people read reviews before hiring a contractor</span>
+        </div>
+        <div class="stat-card">
+          <div class="big-number">50+</div>
+          <span>reviews is your goal (you have under 10 right now)</span>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Text every past customer and ask for a Google review.</strong>
+          <span>Send them this text:</span>
+        </div>
+      </div>
+      <div class="script-box">
+        "Hey [name], this is Dalton from 4 Feathers Fencing. Thanks again for letting us work on your project! If you have a minute, a Google review would really help us out. Here's the link: [your Google review link]. Thanks!"
+      </div>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>After every new job, ask the customer in person before you leave.</strong>
+          <span>Then text them the link that same day.</span>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <strong>How to get your Google review link:</strong> Google "4 Feathers Fencing and Contracting" &rarr; Click your business &rarr; Click "Ask for reviews" &rarr; Copy the link. Text it to everyone.
+      </div>
+    </div>
+
+    <div class="phase phase-now">
+      <span class="phase-label label-now">DO THIS WEEK &mdash; FREE</span>
+      <h2>Step 2: Post on Facebook Every Time You Finish a Job</h2>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Take a before photo and an after photo of every single job.</strong>
+          <span>Even small repairs. People love seeing the difference.</span>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Post the photos on your Facebook page with a short caption.</strong>
+          <span>Something like:</span>
+        </div>
+      </div>
+      <div class="script-box">
+        "New cedar privacy fence in Blanchard! 🔨 Another happy customer. Need a fence or deck? Call or text us for a free estimate: (405) 276-9765"
+      </div>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Share your posts in local Facebook groups.</strong>
+          <span>Search for: "Blanchard Community," "Norman Buy/Sell/Trade," "Moore Oklahoma Community," "OKC Home Improvement." Join them and share your work.</span>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Sign up for Nextdoor (free).</strong>
+          <span>Go to <a href="https://business.nextdoor.com/" target="_blank">business.nextdoor.com</a>. This is where your neighbors look for contractors. Claim your business and respond when people ask about fencing.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="phase phase-now">
+      <span class="phase-label label-now">DO THIS WEEK &mdash; $150</span>
+      <h2>Step 3: Yard Signs at Every Job</h2>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Order 20&ndash;30 yard signs.</strong>
+          <span>Put your name, phone number, and "Free Estimates" on them. Order from VistaPrint or a local sign shop. About $5&ndash;10 each.</span>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Ask every customer: "Can I leave a sign in your yard for a couple weeks?"</strong>
+          <span>Most people say yes. Put it near the road where people driving by can see it.</span>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <strong>Why this works:</strong> Neighbors see your sign every day. When they need a fence, you're the first name they think of. Each sign brings 1&ndash;3 calls per month for basically no cost.
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- PHASE 2: WITHIN 2 WEEKS         -->
+    <!-- =============================== -->
+    <div class="phase phase-soon">
+      <span class="phase-label label-soon">DO WITHIN 2 WEEKS &mdash; FREE</span>
+      <h2>Step 4: Sign Up for Lead Apps</h2>
+      <p>These are apps where <strong>people who already want a fence</strong> go to find a contractor. They come to you &mdash; you don't have to chase them.</p>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Sign up for Thumbtack.</strong>
+          <span>Go to <a href="https://www.thumbtack.com/pros" target="_blank">thumbtack.com/pros</a>. Create a profile. Set your service area. Set a weekly budget (start with $50&ndash;100/week). People who need fences will find you.</span>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Sign up for Angi (used to be Angie's List + HomeAdvisor).</strong>
+          <span>Go to <a href="https://www.angi.com/pro/" target="_blank">angi.com/pro</a>. Same idea &mdash; homeowners post jobs, they match you.</span>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Sign up for Google Local Service Ads.</strong>
+          <span>Go to <a href="https://ads.google.com/local-services-ads/" target="_blank">ads.google.com/local-services-ads</a>. This puts you at the very top of Google when someone searches "fence installer near me." You only pay when someone actually calls you.</span>
+        </div>
+      </div>
+
+      <div class="money-box">
+        <h3>What to expect</h3>
+        <p>If you spend <strong>$500/month total</strong> across these apps:</p>
+        <ul>
+          <li>You'll get about <strong>10&ndash;15 leads per month</strong></li>
+          <li>If you close 30% of them on a $3,000 average job</li>
+          <li>That's <strong>3&ndash;5 new jobs = $9,000&ndash;$15,000 in revenue</strong></li>
+          <li>From a $500 spend. That's a great deal.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="phase phase-soon">
+      <span class="phase-label label-soon">DO WITHIN 2 WEEKS &mdash; FREE</span>
+      <h2>Step 5: Start a Referral Program</h2>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Tell every customer: "If you send someone our way who books a job, I'll give you $50."</strong>
+          <span>Give the new customer $50 off too. Everybody wins.</span>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Text your past customers about it.</strong>
+          <span>Something like:</span>
+        </div>
+      </div>
+      <div class="script-box">
+        "Hey [name]! Quick question &mdash; know anyone who needs a fence or deck? If you send them my way and they book, I'll send you $50 as a thank you. Just have them mention your name. &mdash;Dalton, 4 Feathers"
+      </div>
+
+      <div class="tip-box">
+        <strong>Why this works:</strong> Referred customers trust you before they even meet you. They close at 3&ndash;5x the rate of cold leads. And you only pay the $50 when you actually get the job.
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- THE GOLDEN RULE                  -->
+    <!-- =============================== -->
+    <div class="phase phase-now" style="border-left-color: #e65100;">
+      <h2 style="color: #e65100;">⚡ The #1 Rule: Answer Your Phone FAST</h2>
+      <p>This matters more than anything else on this page.</p>
+
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="big-number" style="color: #e65100;">5 min</div>
+          <span>Call the lead back within 5 minutes</span>
+        </div>
+        <div class="stat-card">
+          <div class="big-number" style="color: #e65100;">21x</div>
+          <span>more likely to get the job if you respond in 5 min vs 30 min</span>
+        </div>
+        <div class="stat-card">
+          <div class="big-number" style="color: #e65100;">78%</div>
+          <span>of people hire the first contractor who responds</span>
+        </div>
+      </div>
+
+      <p><strong>When a lead comes in, do this:</strong></p>
+      <ol style="line-height: 2;">
+        <li><strong>Call them right away.</strong> Drop what you're doing if you can.</li>
+        <li><strong>If they don't answer, text them immediately:</strong></li>
+      </ol>
+      <div class="script-box">
+        "Hi [name], this is Dalton from 4 Feathers Fencing. I just tried calling about your fence project. I'd love to help &mdash; text or call me back anytime. (405) 276-9765"
+      </div>
+      <ol start="3" style="line-height: 2;">
+        <li><strong>Try calling again in 1 hour.</strong></li>
+        <li><strong>Send one more text the next day</strong> if you haven't heard back.</li>
+        <li><strong>Try one last call on day 3.</strong> After that, move on.</li>
+      </ol>
+
+      <div class="tip-box">
+        <strong>The average contractor takes 42 hours to respond.</strong> If you respond in 5 minutes, you win almost every time. This alone will get you more jobs than any ad you could buy.
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- PHASE 3: MONTH 2                -->
+    <!-- =============================== -->
+    <div class="phase phase-soon">
+      <span class="phase-label label-soon">MONTH 2 &mdash; ~$1,800</span>
+      <h2>Step 6: Send Postcards to Every House in Your Area</h2>
+      <p>The post office has a program called <strong>EDDM (Every Door Direct Mail)</strong>. You pick the neighborhoods, and they deliver your postcard to every single mailbox. No address list needed.</p>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Design an oversized postcard (bigger = better response).</strong>
+          <span>Put a before/after photo, your phone number, "$200 off" offer, and a QR code to your website. Hire someone on Fiverr for $50&ndash;$100 or use Canva.</span>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Print 5,000 postcards.</strong>
+          <span>Use VistaPrint or GotPrint. About $400 for 5,000.</span>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Go to <a href="https://eddm.usps.com/eddm" target="_blank">eddm.usps.com</a> and pick your routes.</strong>
+          <span>Start with Blanchard, Newcastle, Tuttle, and south Norman. You can filter by income and household size to target homeowners.</span>
+        </div>
+      </div>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Bundle your postcards and drop them at the post office.</strong>
+          <span>Postage is about $0.25 per card. For 5,000 cards, that's about $1,235.</span>
+        </div>
+      </div>
+
+      <div class="money-box">
+        <h3>What to expect from 5,000 postcards (~$1,800 total)</h3>
+        <ul>
+          <li><strong>50&ndash;150 people</strong> will call or visit your website</li>
+          <li><strong>25&ndash;75</strong> of those will want a quote</li>
+          <li>If you close 30% at $3,000 average: <strong>8&ndash;23 jobs = $24,000&ndash;$69,000</strong></li>
+          <li>That's a great return on $1,800</li>
+        </ul>
+      </div>
+
+      <div class="tip-box">
+        <strong>Best times to send:</strong> Early spring (March&ndash;April) and early fall (September&ndash;October). That's when people think about fences.
+      </div>
+    </div>
+
+    <div class="phase phase-soon">
+      <span class="phase-label label-soon">ONGOING &mdash; FREE</span>
+      <h2>Step 7: Door Hangers Near Your Jobs</h2>
+
+      <div class="todo">
+        <div class="todo-check"></div>
+        <div class="todo-text">
+          <strong>Every time you're working on a job, hang 50 door hangers on nearby houses.</strong>
+          <span>The hanger should say: "Your neighbor just got a new fence from us! Want a free estimate?" Print them for about $0.10&ndash;$0.25 each.</span>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <strong>Why this works:</strong> Neighbors already see your truck and crew. They're curious. A door hanger turns that curiosity into a phone call.
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- DON'T DO THIS                    -->
+    <!-- =============================== -->
+    <div class="phase" style="border-left: 6px solid #c62828;">
+      <h2 style="color: #c62828;">❌ Don't Waste Time on These</h2>
+      <ul>
+        <li><strong>Don't cold call random people.</strong> Only 1&ndash;3% will even talk to you, and it can get you in legal trouble (Do Not Call laws). Let people come to you.</li>
+        <li><strong>Don't blast emails to strangers.</strong> Less than 1% will respond. It's basically spam.</li>
+        <li><strong>Don't pay for a fancy website redesign right now.</strong> Reviews and response time matter 10x more than a pretty website.</li>
+      </ul>
+      <p><strong>Instead:</strong> Let the apps (Thumbtack, Angi, Google) bring leads to you. Let postcards and Facebook bring calls to you. Then answer fast and you'll win the job.</p>
+    </div>
+
+    <!-- =============================== -->
+    <!-- YOUR ADVANTAGE OVER FENCE OKC    -->
+    <!-- =============================== -->
+    <div class="phase phase-now">
+      <h2>How You Beat the Big Guys (Fence OKC)</h2>
+      <p>Fence OKC is the biggest local competitor. Here's where you beat them:</p>
+
+      <table class="vs-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Fence OKC</th>
+            <th>4 Feathers</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Hours</strong></td>
+            <td class="lose">Mon&ndash;Fri 8&ndash;4, closed weekends</td>
+            <td class="win">6AM&ndash;10PM + weekends ✓</td>
+          </tr>
+          <tr>
+            <td><strong>Location</strong></td>
+            <td class="lose">Downtown OKC (far from Blanchard)</td>
+            <td class="win">Right in Blanchard ✓</td>
+          </tr>
+          <tr>
+            <td><strong>Decks</strong></td>
+            <td class="lose">Doesn't offer decks</td>
+            <td class="win">Builds decks too ✓</td>
+          </tr>
+          <tr>
+            <td><strong>Pricing</strong></td>
+            <td class="lose">Big overhead = higher prices</td>
+            <td class="win">Lower overhead = competitive prices ✓</td>
+          </tr>
+          <tr>
+            <td><strong>Focus</strong></td>
+            <td>Mostly commercial / government</td>
+            <td class="win">Focused on homeowners ✓</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Your territory:</strong> Blanchard, Newcastle, Tuttle, Purcell, Chickasha, and south Norman. Most OKC companies don't try hard in these towns. Own them.</p>
+    </div>
+
+    <!-- =============================== -->
+    <!-- QUICK REFERENCE BUDGET            -->
+    <!-- =============================== -->
+    <div class="phase">
+      <h2>90-Day Budget (Total: ~$2,500)</h2>
+      <table class="vs-table">
+        <thead>
+          <tr>
+            <th>What</th>
+            <th>Cost</th>
+            <th>When</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Google Reviews</td><td><strong>Free</strong></td><td>This week</td></tr>
+          <tr><td>Facebook posts &amp; Nextdoor</td><td><strong>Free</strong></td><td>This week</td></tr>
+          <tr><td>Yard signs (20&ndash;30)</td><td>$150&ndash;$300</td><td>This week</td></tr>
+          <tr><td>Thumbtack + Angi + Google LSA</td><td>$500/month</td><td>Week 2</td></tr>
+          <tr><td>Referral program</td><td>$50 per referral (only when you get a job)</td><td>Week 2</td></tr>
+          <tr><td>Postcard design + printing</td><td>$400&ndash;$500</td><td>Month 2</td></tr>
+          <tr><td>Postcard postage (5,000 cards)</td><td>$1,235</td><td>Month 2</td></tr>
+          <tr><td>Door hangers</td><td>$25&ndash;$50</td><td>Ongoing</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="phase phase-now">
+      <h2>The Short Version</h2>
+      <ol style="font-size: 1.1rem; line-height: 2;">
+        <li><strong>Get Google reviews</strong> (text all past customers today)</li>
+        <li><strong>Post on Facebook</strong> after every job</li>
+        <li><strong>Put yard signs</strong> at every job site</li>
+        <li><strong>Sign up for Thumbtack, Angi, and Google LSA</strong></li>
+        <li><strong>Start a referral program</strong> ($50 for each referral)</li>
+        <li><strong>Answer every lead in 5 minutes or less</strong></li>
+        <li><strong>Send postcards</strong> to Blanchard/Norman/Tuttle area</li>
+        <li><strong>Hang door hangers</strong> near every job site</li>
+      </ol>
+      <p style="font-size: 1.1rem;"><strong>Do #1 through #6 and you'll see more jobs within 2 weeks. That's a promise.</strong></p>
+    </div>
+
+    <p style="text-align: center; color: #888; margin: 2rem 0;">For the full research with all the data and numbers, see the <a href="outreach.html">Outreach &amp; Market Research</a> page.</p>
+
+  </main>
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <h3 style="margin:0; font-size: 1.2rem;">4 Feathers <span style="color: var(--accent);">Fencing</span></h3>
+        <p>Professional fencing and contracting services in Blanchard, OK.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:4052769765">(405) 276-9765</a>
+        <a href="mailto:4featherllc@gmail.com">4featherllc@gmail.com</a>
+        <a>Blanchard, OK</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 4 Feathers Fencing and Contracting LLC. All rights reserved.</div>
+  </footer>
+</body>
+</html>

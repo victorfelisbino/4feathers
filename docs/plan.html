@@ -4,67 +4,96 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Growth Plan | 4 Feathers Fencing & Contracting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
-    <h1>Growth & Marketing Plan</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="contact.html">Contact</a>
-      <a href="plan.html">Plan</a>
-      <a href="outreach.html">Outreach</a>
-    </nav>
+    <div class="header-inner">
+      <a href="index.html" class="logo">4 Feathers <span class="logo-accent">Fencing</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="testimonials.html">Testimonials</a>
+        <a href="contact.html" class="nav-cta">Free Quote</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section>
-      <h2>How We Can Help 4 Feathers Grow</h2>
-      <ol>
-        <li><strong>Website & Digital Presence</strong>
-          <ul>
-            <li>Launch a modern, mobile-friendly website with strong calls-to-action and a gallery of real work.</li>
-            <li>Add a Google Business Profile and encourage customer reviews.</li>
-            <li>Share project photos and testimonials on Facebook and local groups.</li>
-            <li>Use local SEO keywords (e.g., “fence installation [your town]”).</li>
-          </ul>
-        </li>
-        <li><strong>Direct Outreach</strong>
-          <ul>
-            <li>Design a simple, eye-catching letter or pamphlet offering free estimates and a special offer.</li>
-            <li>Mail or hand-deliver to homes and farms within a 10–20 mile radius.</li>
-            <li>Include a QR code or link to the website for easy contact.</li>
-          </ul>
-        </li>
-        <li><strong>Government & Commercial Work</strong>
-          <ul>
-            <li>Register on local government and school district vendor lists (search for “procurement” or “vendor registration” for your county/city).</li>
-            <li>Check sites like <a href="https://sam.gov" target="_blank">SAM.gov</a> for federal contracts, and local city/county bid boards for fencing jobs.</li>
-            <li>Network with local builders, realtors, and property managers.</li>
-          </ul>
-        </li>
-        <li><strong>Scaling Operations</strong>
-          <ul>
-            <li>Collect and showcase more before/after photos and testimonials.</li>
-            <li>Consider hiring part-time help for installs or admin as leads grow.</li>
-            <li>Track all leads and follow up quickly.</li>
-          </ul>
-        </li>
-      </ol>
-      <h3>Next Steps</h3>
-      <ul>
-        <li>Draft a sample letter/pamphlet for direct outreach.</li>
-        <li>Register for local government and school district vendor lists.</li>
-        <li>Continue collecting photos and testimonials for the website and social media.</li>
-      </ul>
-      <p>This plan is designed to help Dalton and 4 Feathers Fencing & Contracting generate more leads, win more jobs, and grow sustainably. Please review and let us know your thoughts!</p>
-    </section>
-  </main>
+
+  <section class="page-hero">
+    <h2>Growth &amp; Marketing Plan</h2>
+    <p>Strategic roadmap for growing 4 Feathers Fencing &amp; Contracting.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Strategy</span>
+        <h2>How We Can Help 4 Feathers Grow</h2>
+      </div>
+
+      <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="feature-card">
+          <div class="feature-icon">&#128187;</div>
+          <h3>Website &amp; Digital Presence</h3>
+          <p>Modern mobile-friendly website, Google Business Profile, customer reviews, social media, and local SEO for "fence installation Blanchard OK."</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128231;</div>
+          <h3>Direct Outreach</h3>
+          <p>Eye-catching postcards and door hangers with free estimate offers, QR codes, and before/after photos. Target homes within 10-20 miles.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#127970;</div>
+          <h3>Government &amp; Commercial</h3>
+          <p>Register on local vendor lists, check SAM.gov for federal contracts, and network with builders, realtors, and property managers.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">&#128200;</div>
+          <h3>Scaling Operations</h3>
+          <p>Collect before/after photos and testimonials. Track all leads. Hire part-time help as business grows.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <p>For the complete research and detailed strategy, see:</p>
+        <div class="hero-buttons">
+          <a href="outreach.html" class="btn btn-primary">Full Market Research &rarr;</a>
+          <a href="action-plan.html" class="btn btn-dark">Dalton's Action Plan &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2026 4 Feathers Fencing & Contracting</p>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <h3 style="margin:0; font-size: 1.2rem;">4 Feathers <span style="color: var(--accent);">Fencing</span></h3>
+        <p>Professional fencing and contracting services in Blanchard, OK.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:4052769765">(405) 276-9765</a>
+        <a href="mailto:4featherllc@gmail.com">4featherllc@gmail.com</a>
+        <a>Blanchard, OK</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 4 Feathers Fencing and Contracting LLC. All rights reserved.</div>
   </footer>
+
 </body>
 </html>

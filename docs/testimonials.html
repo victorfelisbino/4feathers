@@ -4,38 +4,142 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testimonials | 4 Feathers Fencing & Contracting</title>
+  <meta name="description" content="Read what customers say about 4 Feathers Fencing & Contracting. Real reviews from real homeowners in Blanchard and the OKC metro.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
-    <h1>Customer Testimonials</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="contact.html">Contact</a>
-        <a href="plan.html">Plan</a>
-      <a href="outreach.html">Outreach</a>
-    </nav>
+    <div class="header-inner">
+      <a href="index.html" class="logo">4 Feathers <span class="logo-accent">Fencing</span></a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span></label>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="testimonials.html" class="active">Testimonials</a>
+        <a href="contact.html" class="nav-cta">Free Quote</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section>
-      <h2>What Our Clients Say</h2>
-      <blockquote>
-        <p>"Dalton and his crew did an amazing job on our new fence. Highly recommend!"</p>
-        <footer>- Satisfied Customer</footer>
-      </blockquote>
-      <blockquote>
-        <p>"Professional, fast, and affordable. Will use again!"</p>
-        <footer>- Happy Homeowner</footer>
-      </blockquote>
-      <!-- Add more testimonials here -->
-    </section>
-  </main>
+
+  <section class="page-hero">
+    <h2>Customer Testimonials</h2>
+    <p>Don't just take our word for it &mdash; hear from the people we've built for.</p>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-label">Real Reviews</span>
+        <h2>What Our Customers Say</h2>
+        <p>Every project matters to us, and our customers' satisfaction is what drives us to do our best work.</p>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"I have used 4 Feathers Fencing and Contracting LLC on 2 occasions. They have tackled each project with professionalism. I have been very happy with their work. Do not be afraid to consider them for any project."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JG</div>
+            <div>
+              <strong>Jere Gunderman</strong>
+              <span>Repeat Customer</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Dalton and his crew did an amazing job on our new fence. They were professional, fast, and the price was very fair. The fence looks incredible and we've already had neighbors ask who did the work. Highly recommend!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">HH</div>
+            <div>
+              <strong>Happy Homeowner</strong>
+              <span>Blanchard, OK</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Professional, fast, and affordable. Will use again! They showed up when they said they would, finished ahead of schedule, and left the property clean. That's how you earn a customer for life."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SC</div>
+            <div>
+              <strong>Satisfied Customer</strong>
+              <span>Oklahoma City Metro</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"We needed a fence repair after a storm and 4 Feathers was out the next day to take a look. Had a quote within hours and got the job done that week. Great communication and fair pricing. Really appreciate the quick response."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MR</div>
+            <div>
+              <strong>Mike R.</strong>
+              <span>Newcastle, OK</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-alt">
+    <div class="section-inner" style="text-align: center; max-width: 640px;">
+      <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">Ready to Be Our Next Happy Customer?</h2>
+      <p style="color: var(--text-light); margin-bottom: 2rem;">Contact us today for a free estimate. We'll treat your property like it's our own.</p>
+      <div class="hero-buttons">
+        <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+        <a href="gallery.html" class="btn btn-dark">See Our Work &rarr;</a>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2026 4 Feathers Fencing & Contracting</p>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <h3 style="margin:0; font-size: 1.2rem;">4 Feathers <span style="color: var(--accent);">Fencing</span></h3>
+        <p>Professional fencing and contracting services in Blanchard, OK and the surrounding OKC metro area.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61558213563085" target="_blank">FB</a>
+          <a href="https://maps.app.goo.gl/riAeQP8M8up69pFF8" target="_blank">G</a>
+          <a href="https://www.yelp.com/biz/4-feathers-fencing-and-contracting-blanchard" target="_blank">Y</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html">Fence Installation</a>
+        <a href="services.html">Fence Repair</a>
+        <a href="services.html">Deck Building</a>
+        <a href="services.html">Fence Staining</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:4052769765">(405) 276-9765</a>
+        <a href="mailto:4featherllc@gmail.com">4featherllc@gmail.com</a>
+        <a>Blanchard, OK</a>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 4 Feathers Fencing and Contracting LLC. All rights reserved.</div>
   </footer>
+
 </body>
 </html>
